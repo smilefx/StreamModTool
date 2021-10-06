@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.05" height="25.05" viewBox="0 0 25.05 25.05">
+  <g id="Gruppe_547" data-name="Gruppe 547" transform="translate(-770 -1214)">
+    <g id="Gruppe_424" data-name="Gruppe 424" transform="translate(770 1214)">
+      <rect id="Rechteck_393" data-name="Rechteck 393" width="24" height="24" transform="translate(0.525 0.525)" fill="rgba(255,255,255,0)"/>
+      <path id="Rechteck_643" data-name="Rechteck 643" d="M2.251,0H22.8A2.251,2.251,0,0,1,25.05,2.251V22.8A2.251,2.251,0,0,1,22.8,25.05H2.251A2.251,2.251,0,0,1,0,22.8V2.251A2.251,2.251,0,0,1,2.251,0Z" fill="rgba(145,71,255,0.21)"/>
+    </g>
+    <g id="apps_black_24dp" transform="translate(771 1215.024)">
+      <path id="Pfad_3647" data-name="Pfad 3647" d="M0,0H23V23H0Z" fill="none"/>
+      <path id="Pfad_3648" data-name="Pfad 3648" d="M4,7.75H7.75V4H4ZM9.625,19h3.75V15.25H9.625ZM4,19H7.75V15.25H4Zm0-5.625H7.75V9.625H4Zm5.625,0h3.75V9.625H9.625ZM15.25,4V7.75H19V4ZM9.625,7.75h3.75V4H9.625Zm5.625,5.625H19V9.625H15.25Zm0,5.625H19V15.25H15.25Z" fill="#9147ff"/>
+    </g>
+  </g>
+</svg>

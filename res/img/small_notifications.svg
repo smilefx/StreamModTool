@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.05" height="25.05" viewBox="0 0 25.05 25.05">
+  <g id="Gruppe_548" data-name="Gruppe 548" transform="translate(-770 -1214.025)">
+    <g id="Gruppe_424" data-name="Gruppe 424" transform="translate(770 1214.025)">
+      <rect id="Rechteck_393" data-name="Rechteck 393" width="24" height="24" transform="translate(0.525 0.525)" fill="rgba(255,255,255,0)"/>
+      <path id="Rechteck_643" data-name="Rechteck 643" d="M2.251,0H22.8A2.251,2.251,0,0,1,25.05,2.251V22.8A2.251,2.251,0,0,1,22.8,25.05H2.251A2.251,2.251,0,0,1,0,22.8V2.251A2.251,2.251,0,0,1,2.251,0Z" fill="rgba(145,71,255,0.21)"/>
+    </g>
+    <path id="notifications_black_24dp_1_" data-name="notifications_black_24dp (1)" d="M11.073,19.74a1.773,1.773,0,0,0,1.768-1.768H9.3A1.768,1.768,0,0,0,11.073,19.74Zm5.3-5.3V10.015c0-2.714-1.45-4.986-3.979-5.588v-.6a1.326,1.326,0,0,0-2.652,0v.6c-2.537.6-3.979,2.865-3.979,5.588v4.421L4,16.2v.884H18.146V16.2Z" transform="translate(771.415 1215.031)" fill="#9147ff"/>
+  </g>
+</svg>
