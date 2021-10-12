@@ -11,154 +11,345 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./res/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="./res/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./res/css/main_raw.css">
     <script src="./res/js/main.js" type="text/javascript"></script>
 
 </head>
 
 <body>
+    <!-- NOTE: Header -->
     <header>
-        <div class="header-left">
+        <div class="header-left" onclick="window.location.hash = '';">
             <img class="header-logo" src="./res/img/header_logo.svg" alt="">
             <h1 class="header-text">Stream Moderation Tool</h1>
         </div>
         <div class="header-right">
-            <a href="" class="header-entry" state="active">Home</a>
-            <a href="" class="header-entry" state="inactive">Features</a>
-            <a href="" class="header-entry" state="inactive">About</a>
-            <div class="header-entry" state="button">Download</div>
+            <a href="" class="header-entry" id="menu-entry-main" state="active">Home</a>
+            <a href="#features" class="header-entry" id="menu-entry-features" state="inactive">Features</a>
+            <a href="#about" class="header-entry" id="menu-entry-about" state="inactive">About</a>
+            <div class="header-entry" state="button" onclick="scrollDownload();">Download</div>
         </div>
+        <i class="material-icons mobile-icon" id="mobile-icon" onclick="openMobileMenu();">menu</i>
     </header>
-    <div class="panel-main">
-        <div class="panel-content">
-            <div class="panel-left">
-                <img src="./res/img/tool_main.jpg" alt="" class="panel-left-image">
+
+    <div class="mobile-header" id="mobile-header" state="closed">
+        <a href="" class="header-entry" id="mobile-entry-main" state="active">Home</a>
+        <a href="#features" class="header-entry" id="mobile-entry-features" state="inactive">Features</a>
+        <a href="#about" class="header-entry" id="mobile-entry-about" state="inactive">About</a>
+    </div>
+
+    <!-- PARA: Main -->
+    <div class="section-main" id="section-main" style="display: none;">
+        <div class="panel-main">
+            <div class="panel-content">
+                <div class="panel-left">
+                    <img src="./res/img/tool_main.jpg" alt="" class="panel-left-image">
+                </div>
+                <div class="panel-right">
+                    <div class="panel-right-div"></div>
+                    <div class="panel-right-header" id="panel-right-text">A whole new <h1 class="panel-anim-1">moderation</h1> <h1 class="panel-anim-2">experience</h1>.</div>
+                    <h1 class="panel-right-desc">Twitch moderation with expanded and enhanced features - simplify your workflow now!</h1>
+                    <div class="panel-right-buttons">
+                        <div class="panel-button-download" onclick="scrollDownload();">
+                            <img src="./res/img/download_windows.svg" alt="">
+                            <h1>Download</h1>
+                        </div>
+                        <div class="panel-button-secondary" onclick="window.location.hash = '#features';">
+                            <i class="material-icons">checklist</i>
+                            <h1>Features</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="panel-right">
+            <div class="panel-background">
+                <div class="panel-grad-top"></div>
+                <div class="panel-grad-bot"></div>
+                <div class="panel-grad-full"></div>
+                <div class="panel-image" style="background-image: url('./res/img/panel_main.png');"></div>
+            </div>
+        </div>
+        <section class="main">
+            <div class="main-content">
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_moderation.svg" alt="">
+                            <h1 class="main-header-text">Moderation</h1>
+                        </div>
+                        <h1 class="main-info">Simplified chats for easier moderation</h1>
+                        <h1 class="main-desc">The integrated chats provide a variety of default and custom highlights, a profanity filter and event messages.</h1>
+                    </div>
+                </div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_0_bak.png');"></div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_1_bak.png');"></div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_streams.svg" alt="">
+                            <h1 class="main-header-text">Streams</h1>
+                        </div>
+                        <h1 class="main-info">Watch up to three concurrent livestreams</h1>
+                        <h1 class="main-desc">Choose up to three concurrent streams or watch only a single one. Even open squad streams with a single click.</h1>
+                    </div>
+                </div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_hotkeys.svg" alt="">
+                            <h1 class="main-header-text">Hotkeys</h1>
+                        </div>
+                        <h1 class="main-info">Unlimited chat hotkeys</h1>
+                        <h1 class="main-desc">Assign custom hotkeys to deal with repeating tasks or commands, switch between profiles and export key sets.</h1>
+                    </div>
+                </div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_2_bak.png');"></div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_3_bak.png');"></div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_statistics.svg" alt="">
+                            <h1 class="main-header-text">Statistics</h1>
+                        </div>
+                        <h1 class="main-info">Overview detailed chat statistics</h1>
+                        <h1 class="main-desc">Get an insight on chat interactions per minute, message distribution per role or moderator activity.</h1>
+                    </div>
+                </div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_commands.svg" alt="">
+                            <h1 class="main-header-text">Commands</h1>
+                        </div>
+                        <h1 class="main-info">Manage famous chatbot commands</h1>
+                        <h1 class="main-desc">Featuring a convenient list of chatbot commands, you have the ability to add, edit and delete commands.</h1>
+                    </div>
+                </div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_4_bak.png');"></div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_5_bak.png');"></div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_notifications.svg" alt="">
+                            <h1 class="main-header-text">Notifications</h1>
+                        </div>
+                        <h1 class="main-info">Receive important stream notifications</h1>
+                        <h1 class="main-desc">Enable notifications to receive alerts when following streamers go live or change the current game.</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-expand">
+            <div class="expand-features" onclick="window.location.hash = '#features';">
+                <div class="panel-button-expand">
+                    <h1>+ 50</h1>
+                </div>
+                <h1 class="expand-features-text">View all other features</h1>
+            </div>
+        </section>
+        <section class="panel-info" id="panel-download">
+            <div class="panel-content">
                 <div class="panel-right-div"></div>
-                <div class="panel-right-header" id="panel-right-text">A whole new <h1 class="panel-anim-1">moderation</h1> <h1 class="panel-anim-2">experience</h1>.</div>
-                <h1 class="panel-right-desc">Twitch moderation with expanded and enhanced features - simplify your workflow now!</h1>
+                <div class="panel-right-header">Download now for free!</div>
+                <h1 class="panel-right-desc">The tool is free to use and feedback, bug reports and feature requests are very welcome - Have fun!</h1>
                 <div class="panel-right-buttons">
                     <div class="panel-button-download">
                         <img src="./res/img/download_windows.svg" alt="">
                         <h1>Download</h1>
                     </div>
-                    <div class="panel-button-secondary">
-                        <i class="material-icons">checklist</i>
-                        <h1>Features</h1>
-                    </div>
                 </div>
+                <h1 class="panel-right-version" id="panel-right-version"></h1>
             </div>
-        </div>
-        <div class="panel-background">
-            <div class="panel-grad-top"></div>
-            <div class="panel-grad-bot"></div>
-            <div class="panel-grad-full"></div>
-            <div class="panel-image" style="background-image: url('./res/img/panel_main.png');"></div>
-        </div>
+            <div class="panel-background">
+                <div class="panel-grad-full"></div>
+                <div class="panel-grad-top"></div>
+                <div class="panel-grad-bot"></div>
+                <div class="panel-grad-full-2"></div>
+                <div class="panel-image" style="background-image: url('./res/img/download_main.png');"></div>
+            </div>
+        </section>
     </div>
-    <section class="main">
-        <div class="main-content">
-            <div class="main-entry" type="text">
-                <div class="main-text">
-                    <div class="main-header">
-                        <img src="./res/img/small_moderation.svg" alt="">
-                        <h1 class="main-header-text">Moderation</h1>
+
+    <!-- PARA: Features -->
+    <div class="section-features" id="section-features" style="display: none;">
+        <section class="panel-features">
+            <div class="panel-content">
+                <div class="panel-right-div"></div>
+                <div class="panel-right-header">Available features</div>
+                <h1 class="panel-right-desc">The tool is packed with lots of useful moderation, chatting and watching features.</h1>
+            </div>
+            <div class="panel-background">
+                <div class="panel-grad-full"></div>
+                <div class="panel-grad-top"></div>
+                <div class="panel-grad-bot"></div>
+                <div class="panel-grad-full-2"></div>
+                <div class="panel-image" style="background-image: url('./res/img/panel_features.png');"></div>
+            </div>
+        </section>
+        <section class="features-showcase" id="features-showcase">
+            
+        </section>
+    </div>
+
+    <!-- PARA: About -->
+    <div class="section-about" id="section-about" style="display: none;">
+        <section class="panel-features">
+            <div class="panel-content">
+                <div class="panel-right-div"></div>
+                <div class="panel-right-header">About & FAQs</div>
+                <h1 class="panel-right-desc">Find out who I am and what you can expect from the Stream Moderation Tool.</h1>
+            </div>
+            <div class="panel-background">
+                <div class="panel-grad-full"></div>
+                <div class="panel-grad-top"></div>
+                <div class="panel-grad-bot"></div>
+                <div class="panel-grad-full-2"></div>
+                <div class="panel-image" style="background-image: url('./res/img/panel_about.png');"></div>
+            </div>
+        </section>
+        <section class="main" style="margin-top: 90px;">
+            <div class="main-content">
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_about.svg" alt="">
+                            <h1 class="main-header-text">About</h1>
+                        </div>
+                        <h1 class="main-info">A bit about me</h1>
+                        <h1 class="main-desc" style="text-align: justify;">My name is Luca, I study applied computer science and in my freetime I set myself the goal to contribute to the online world by creating useful software applications. The Stream Moderation Tool started as a small side project and soon became more complex than imagined - though still being developed for free in my spare time.</h1>
                     </div>
-                    <h1 class="main-info">Simplified chats for easier moderation</h1>
-                    <h1 class="main-desc">The integrated chats provide a variety of default and custom highlights, a profanity filter and event messages.</h1>
                 </div>
-            </div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_0_bak.png');"></div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_1_bak.png');"></div>
-            <div class="main-entry" type="text">
-                <div class="main-text">
-                    <div class="main-header">
-                        <img src="./res/img/small_streams.svg" alt="">
-                        <h1 class="main-header-text">Streams</h1>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_about_bak.png');"></div>
+                <div class="main-entry" type="image" style="background-image: url('./res/img/panel_support_bak.png');"></div>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_support.svg" alt="">
+                            <h1 class="main-header-text">Support</h1>
+                        </div>
+                        <h1 class="main-info">Support the project development</h1>
+                        <h1 class="main-desc">Every donation will help to make further development possible and is very appreciated!</h1>
+                        <div class="donate-button-expand" onclick="window.open('https://ko-fi.com/smilefx');" style="margin-top: 45px;">
+                            <h1>Donate</h1>
+                        </div>
                     </div>
-                    <h1 class="main-info">Watch up to three concurrent livestreams</h1>
-                    <h1 class="main-desc">Choose up to three concurrent streams or watch only a single one. Even open squad streams with a single click.</h1>
                 </div>
             </div>
-            <div class="main-entry" type="text">
-                <div class="main-text">
+        </section>
+        <section class="faq">
+            <div class="features-grid">
+                <div class="features-header">
                     <div class="main-header">
-                        <img src="./res/img/small_hotkeys.svg" alt="">
-                        <h1 class="main-header-text">Hotkeys</h1>
+                        <img src="./res/img/small_faq.svg" alt="">
+                        <h1 class="main-header-text">FAQs</h1>
                     </div>
-                    <h1 class="main-info">Unlimited chat hotkeys</h1>
-                    <h1 class="main-desc">Assign custom hotkeys to deal with repeating tasks or commands, switch between profiles and export key sets.</h1>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">How can I get rid of the purple screens?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">There currently is no easy way to get rid of them. Twitch is responsible for the embeded player and the only possibilities are either subscribing to the channel you are watching or watching a streamer that is neither affiliate nor partner.</h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">Can I give you feedback or feature requests?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">Sure! You are very welcome to report bugs, give feedback and suggest features for the Stream Moderation Tool <a href="https://github.com/smilefx/StreamModTool/issues">here</a>.</h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">Am I eligible for Twitch drops?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">Unfortunately as of now you seem to not be eligible for Twitch drops by watching with the Stream Moderation Tool alone. You can bypass this by opening the stream a second time in a muted browser tab and have it play in the background though.</h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">I am having issues loading?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">If you are stuck on loading try to restart the tool and everything should be back to normal. This might also happen if Twitch is experiencing high loads or if you are running too many chats on a rather slow machine. In these cases just wait a bit longer or restart.</h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">Will there be frequent updates?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">I will do my best to frequently update the tool and keep things running. There will also be improvements and feature additions, while always keeping track of changes on Twitch's side.</h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
+                    <h1 class="faq-entry-header">The installer gets blocked by my antivirus?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">The tool was built using ElectronJS and is free of any malware, viruses or other malicious software! You can check out recent VirusTotal scan results <a href="">here</a>. If Windows warns you, it's because I can't afford a rather expensive code signing certificate to validate the installer.</h1>
+                    </div>
                 </div>
             </div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_2_bak.png');"></div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_3_bak.png');"></div>
-            <div class="main-entry" type="text">
-                <div class="main-text">
+        </section>
+        <section class="thanks">
+            <div class="features-grid">
+                <div class="features-header">
                     <div class="main-header">
-                        <img src="./res/img/small_statistics.svg" alt="">
-                        <h1 class="main-header-text">Statistics</h1>
+                        <img src="./res/img/small_special.svg" alt="">
+                        <h1 class="main-header-text">Special Thanks</h1>
                     </div>
-                    <h1 class="main-info">Overview detailed chat statistics</h1>
-                    <h1 class="main-desc">Get an insight on chat interactions per minute, message distribution per role or moderator activity.</h1>
                 </div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/diefeuerfliege');">DieFeuerfliege</div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/lightwarrior20');">Lightwarrior20</div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/theadd0');">TheAdd0</div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/vVeNltlRiXx');">vVeNltlRiXx</div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/dadoschyt');">DadoschYT</div>
+                <div class="thanks-entry" onclick="window.open('https://twitch.tv/tarumaru');">Tarumaru</div>
             </div>
-            <div class="main-entry" type="text">
-                <div class="main-text">
-                    <div class="main-header">
-                        <img src="./res/img/small_commands.svg" alt="">
-                        <h1 class="main-header-text">Commands</h1>
+        </section>
+    </div>
+
+    <!-- PARA: Legal -->
+    <div class="section-legal" id="section-legal" style="display: none;">
+        <section class="panel-features">
+            <div class="panel-content">
+                <div class="panel-right-div"></div>
+                <div class="panel-right-header">Legal</div>
+                <h1 class="panel-right-desc">A page that nobody probably reads but that somehow seems to be important.</h1>
+            </div>
+            <div class="panel-background">
+                <div class="panel-grad-full"></div>
+                <div class="panel-grad-top"></div>
+                <div class="panel-grad-bot"></div>
+                <div class="panel-grad-full-2"></div>
+                <div class="panel-image" style="background-image: url('./res/img/panel_legal.png');"></div>
+            </div>
+        </section>
+        <section class="main" style="margin-top: 90px; padding-bottom: 140px;">
+            <div class="main-content">
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_disclaimer.svg" alt="">
+                            <h1 class="main-header-text">Disclaimer</h1>
+                        </div>
+                        <h1 class="main-desc" style="text-align: justify;">All product and company names are trademarks ™ or registered ® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+                        <br></br>
+                        Any product names, logos, brands, and other trademarks or images featured or referred to within this website and the Stream Moderation Tool are the property of their respective trademark holders. These trademark holders are not affiliated with the Stream Moderation Tool, its products, or its websites, neither do they sponsor or endorse the Stream Moderation Tool in any way.</h1>
                     </div>
-                    <h1 class="main-info">Manage famous chatbot commands</h1>
-                    <h1 class="main-desc">Featuring a convenient list of chatbot commands, you have the ability to add, edit and delete commands.</h1>
                 </div>
-            </div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_4_bak.png');"></div>
-            <div class="main-entry" type="image" style="background-image: url('./res/img/panel_5_bak.png');"></div>
-            <div class="main-entry" type="text">
-                <div class="main-text">
-                    <div class="main-header">
-                        <img src="./res/img/small_notifications.svg" alt="">
-                        <h1 class="main-header-text">Notifications</h1>
+                <div class="main-entry" type="text">
+                    <div class="main-text">
+                        <div class="main-header">
+                            <img src="./res/img/small_privacy.svg" alt="">
+                            <h1 class="main-header-text">Privacy</h1>
+                        </div>
+                        <h1 class="main-desc" style="text-align: justify;">The Stream Moderation Tool does not process private data. Connections are directly established between the Stream Moderation Tool and Twitch's APIs. No private data will be saved or processed on any another server.</h1>
+                        <div class="main-header" style="margin-top: 60px;">
+                            <img src="./res/img/small_cookies.svg" alt="">
+                            <h1 class="main-header-text">Cookies</h1>
+                        </div>
+                        <h1 class="main-desc" style="color: #65617C; opacity: 1; text-align: justify;">To ensure a working login process third-party cookies by <a href="https://www.twitch.tv/p/en/legal/cookie-notice/" target="_blank">Twitch.tv</a> must be allowed in your browser. The Stream Moderation Tool does not make use of any other cookies nor reads the contents of these third-party cookies.</h1>
                     </div>
-                    <h1 class="main-info">Receive important stream notifications</h1>
-                    <h1 class="main-desc">Enable notifications to receive alerts when following streamers go live or change the current game.</h1>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="main-expand">
-        <div class="expand-features">
-            <div class="panel-button-expand">
-                <h1>+ 50</h1>
-            </div>
-            <h1 class="expand-features-text">View all other features</h1>
-        </div>
-    </section>
-    <section class="panel-info">
-        <div class="panel-content">
-            <div class="panel-right-div"></div>
-            <div class="panel-right-header">Download now for free!</div>
-            <h1 class="panel-right-desc">The tool is free to use and feedback, bug reports and feature requests are very welcome - Have fun!</h1>
-            <div class="panel-right-buttons">
-                <div class="panel-button-download">
-                    <img src="./res/img/download_windows.svg" alt="">
-                    <h1>Download</h1>
-                </div>
-            </div>
-            <h1 class="panel-right-version" id="panel-right-version"></h1>
-        </div>
-        <div class="panel-background">
-            <div class="panel-grad-full"></div>
-            <div class="panel-grad-top"></div>
-            <div class="panel-grad-bot"></div>
-            <div class="panel-grad-full-2"></div>
-            <div class="panel-image" style="background-image: url('./res/img/download_main.png');"></div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <!-- NOTE: Footer -->
     <footer>
         <div class="footer-top">
-            <div class="footer-top-wrapper">
+            <div class="footer-top-wrapper" onclick="window.location.hash = '';">
                 <img class="header-logo" src="./res/img/header_logo.svg" alt="">
                 <h1 class="header-text">Stream Moderation Tool</h1>
             </div>
@@ -166,50 +357,61 @@
         <div class="footer-mid">
             <div class="footer-mid-entry">
                 <h1 class="footer-entry-header">Information</h1>
-                <a href="" class="footer-entry-link">About</a>
-                <a href="" class="footer-entry-link">Report a bug</a>
-                <a href="" class="footer-entry-link">Donate</a>
+                <a href="#about" class="footer-entry-link">About</a>
+                <a href="https://github.com/smilefx/StreamModTool/issues" target="_blank" class="footer-entry-link">Report a bug</a>
+                <a href="https://ko-fi.com/smilefx" target="_blank" class="footer-entry-link">Donate</a>
             </div>
             <div class="footer-mid-entry">
                 <h1 class="footer-entry-header">Legal</h1>
-                <a href="" class="footer-entry-link">Imprint</a>
-                <a href="" class="footer-entry-link">Disclaimer</a>
-                <a href="" class="footer-entry-link">Privacy</a>
+                <a href="#legal" class="footer-entry-link">Disclaimer</a>
+                <a href="#legal" class="footer-entry-link">Privacy</a>
+                <a href="#legal" class="footer-entry-link">Cookies</a>
             </div>
             <div class="footer-mid-entry">
                 <h1 class="footer-entry-header">Resources</h1>
-                <a href="" class="footer-entry-link">Download</a>
-                <a href="" class="footer-entry-link">Features</a>
-                <a href="" class="footer-entry-link">Changelog</a>
+                <a class="footer-entry-link" onclick="scrollDownload();">Download</a>
+                <a href="#features" class="footer-entry-link">Features</a>
+                <a href="https://github.com/smilefx/StreamModTool/releases" target="_blank" class="footer-entry-link">Changelog</a>
             </div>
             <div class="footer-mid-entry">
                 <h1 class="footer-entry-header">Social</h1>
-                <a href="" class="footer-entry-link">
+                <a href="https://twitter.com/smilefxofficial" target="_blank" class="footer-entry-link">
                     <img src="./res/img/social_twitter.svg" alt="">
                     <h1>Twitter</h1>
                 </a>
-                <a href="" class="footer-entry-link">
+                <a href="https://github.com/smilefx" target="_blank" class="footer-entry-link">
                     <img src="./res/img/social_github.svg" alt="">
                     <h1>GitHub</h1>
                 </a>
-                <a href="" class="footer-entry-link">
+                <a href="https://twitch.tv/smilefxofficial" target="_blank" class="footer-entry-link">
                     <img src="./res/img/social_twitch.svg" alt="">
                     <h1>Twitch</h1>
                 </a>
             </div>
-            <div class="footer-mid-entry">
+            <div class="footer-mid-entry" style="padding-top: 6px;">
                 <h1 class="footer-entry-header">Disclaimer</h1>
-                <p class="footer-entry-disc">All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p>
+                <p class="footer-entry-disc">All product and company names are trademarks ™ or registered ® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p>
             </div>
         </div>
         <div class="footer-bot">
             <div class="footer-bot-left">© 2021 Luca R.</div>
-            <a href="" class="footer-entry-link">
+            <a href="https://twitter.com/streammodtool" target="_blank" class="footer-entry-link">
                 <img src="./res/img/social_twitter.svg" alt="">
                 <h1>StreamModTool</h1>
             </a>
         </div>
     </footer>
+    <div class="mobile-footer">
+        <a href="https://twitter.com/streammodtool" target="_blank" class="footer-entry-link">
+            <img src="./res/img/social_twitter.svg" alt="">
+        </a>
+        <a href="https://github.com/smilefx" target="_blank" class="footer-entry-link">
+            <img src="./res/img/social_github.svg" alt="">
+        </a>
+        <a href="https://twitch.tv/smilefxofficial" target="_blank" class="footer-entry-link">
+            <img src="./res/img/social_twitch.svg" alt="">
+        </a>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.372" height="36.372" viewBox="0 0 36.372 36.372">
+  <g id="Gruppe_606" data-name="Gruppe 606" transform="translate(-770 -1214)">
+    <g id="Gruppe_424" data-name="Gruppe 424" transform="translate(770 1214)">
+      <rect id="Rechteck_393" data-name="Rechteck 393" width="34.848" height="34.848" transform="translate(0.762 0.762)" fill="rgba(255,255,255,0)"/>
+      <path id="Rechteck_643" data-name="Rechteck 643" d="M3.268,0H33.1a3.268,3.268,0,0,1,3.268,3.268V33.1A3.268,3.268,0,0,1,33.1,36.372H3.268A3.268,3.268,0,0,1,0,33.1V3.268A3.268,3.268,0,0,1,3.268,0Z" fill="rgba(145,71,255,0.21)"/>
+    </g>
+    <g id="insights_black_24dp" transform="translate(774.356 1218.393)">
+      <g id="Gruppe_555" data-name="Gruppe 555" transform="translate(0 0)">
+        <rect id="Rechteck_423" data-name="Rechteck 423" width="27.588" height="27.588" fill="none"/>
+      </g>
+      <g id="Gruppe_557" data-name="Gruppe 557" transform="translate(0.545 2.954)">
+        <g id="Gruppe_556" data-name="Gruppe 556">
+          <path id="Pfad_3649" data-name="Pfad 3649" d="M25.089,8a2.413,2.413,0,0,0-2.325,3.023l-4.276,4.288a2.453,2.453,0,0,0-1.253,0L14.165,12.24a2.408,2.408,0,1,0-4.649,0L4.023,17.72a2.407,2.407,0,1,0,1.71,1.71l5.48-5.492a2.453,2.453,0,0,0,1.253,0l3.071,3.071a2.408,2.408,0,1,0,4.649,0l4.288-4.276A2.407,2.407,0,1,0,25.089,8Z" transform="translate(-1 -1.978)" fill="#9147ff"/>
+          <path id="Pfad_3650" data-name="Pfad 3650" d="M15.613,10.227l1.132-2.493,2.481-1.12-2.481-1.12L15.613,3,14.505,5.493,12,6.613l2.505,1.12Z" transform="translate(1.249 -3)" fill="#9147ff"/>
+          <path id="Pfad_3651" data-name="Pfad 3651" d="M4.011,12.022l.6-2.409,2.409-.6-2.409-.6L4.011,6l-.6,2.409L1,9.011l2.409.6Z" transform="translate(-1 -2.387)" fill="#9147ff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.05" height="25.05" viewBox="0 0 25.05 25.05">
+  <g id="Gruppe_761" data-name="Gruppe 761" transform="translate(-770 -1214)">
+    <g id="Gruppe_424" data-name="Gruppe 424" transform="translate(770 1214)">
+      <rect id="Rechteck_393" data-name="Rechteck 393" width="24" height="24" transform="translate(0.525 0.525)" fill="rgba(255,255,255,0)"/>
+      <path id="Rechteck_643" data-name="Rechteck 643" d="M2.251,0H22.8A2.251,2.251,0,0,1,25.05,2.251V22.8A2.251,2.251,0,0,1,22.8,25.05H2.251A2.251,2.251,0,0,1,0,22.8V2.251A2.251,2.251,0,0,1,2.251,0Z" fill="rgba(145,71,255,0.21)"/>
+    </g>
+    <g id="not_listed_location_black_24dp" transform="translate(771.686 1215.686)">
+      <path id="Pfad_3730" data-name="Pfad 3730" d="M0,0H21.678V21.678H0Z" fill="none"/>
+      <path id="Pfad_3731" data-name="Pfad 3731" d="M11.323,2A6.33,6.33,0,0,0,5,8.323c0,4.742,6.323,11.743,6.323,11.743s6.323-7,6.323-11.743A6.33,6.33,0,0,0,11.323,2Zm.795,12.42H10.537V12.839h1.581Zm0-2.592H10.537c0-2.565,2.367-2.367,2.367-3.956a1.581,1.581,0,1,0-3.161,0H8.161a3.161,3.161,0,1,1,6.323,0C14.484,9.849,12.118,10.048,12.118,11.828Z" transform="translate(-0.484 -0.193)" fill="#9147ff"/>
+    </g>
+  </g>
+</svg>
