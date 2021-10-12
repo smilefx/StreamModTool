@@ -417,6 +417,8 @@ header {
     cursor: pointer;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 8;
 }
 
 .panel-button-expand {
@@ -1090,6 +1092,91 @@ footer {
 .mobile-icon, .mobile-header, .mobile-footer {
     display: none;
 }
+
+.download-popup-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0d0c14d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.download-popup {
+    width: 350px;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--midblue);
+    animation: slidePopup 0.5s ease-in-out 0s 1 forwards;
+}
+
+.download-popup i {
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: var(--purple);
+    user-select: none;
+}
+
+.download-popup-header {
+    width: 70%;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 35px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+
+.download-popup-desc {
+    width: 92%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #66637E;
+    position: relative;
+    z-index: 5;
+}
+
+.download-popup-desc b {
+    font-weight: 700;
+}
+
+.download-popup-desc a {
+    text-decoration: none;
+    color: var(--purple);
+    transition: .3s;
+    -webkit-appearance: none;
+    display: inline-block;
+}
+
+.download-popup-desc a:hover {
+    color: var(--white);
+}
+
+@keyframes slidePopup {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* PARA: Mobile */
 
 @media screen and (max-width: 1400px) {
     html {

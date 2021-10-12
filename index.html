@@ -6,8 +6,27 @@
 
     <meta charset="utf-8">
 
-    <title></title>
+    <title>Home - Stream Moderation Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./res/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./res/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./res/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./res/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./res/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./res/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./res/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./res/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./res/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./res/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./res/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./res/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./res/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./res/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#15141E">
+    <meta name="msapplication-TileImage" content="./res/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#15141E">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./res/css/fonts.css">
@@ -17,6 +36,18 @@
 </head>
 
 <body>
+    <!-- NOTE: Popup -->
+    <div class="download-popup-wrapper" id="download-popup">
+        <div class="download-popup">
+            <i class="material-icons">celebration</i>
+            <h1 class="download-popup-header">Thank you for downloading!</h1>
+            <h1 class="download-popup-desc"><b>NOTE:</b> If Windows warns you during installation, it's because I can't afford a rather expensive code signing certificate to validate the installer - Just click "More info" and "Run anyway" to proceed with the installation. Additionally you can find the most recent VirusTotal scan <a href="https://www.virustotal.com/gui/file/29e66d0c6a92c8be66a1bf25c88d3403e1cb67572437c1822b81e4f300941ab8" target="_blank">here</a>.</h1>
+            <div class="donate-button-expand" onclick="closeDownloadPopup();" style="margin-top: 45px;">
+                <h1>Understood</h1>
+            </div>
+        </div>
+    </div>
+
     <!-- NOTE: Header -->
     <header>
         <div class="header-left" onclick="window.location.hash = '';">
@@ -26,7 +57,7 @@
         <div class="header-right">
             <a href="" class="header-entry" id="menu-entry-main" state="active">Home</a>
             <a href="#features" class="header-entry" id="menu-entry-features" state="inactive">Features</a>
-            <a href="#about" class="header-entry" id="menu-entry-about" state="inactive">About</a>
+            <a href="#about" class="header-entry" id="menu-entry-about" state="inactive">FAQ</a>
             <div class="header-entry" state="button" onclick="scrollDownload();">Download</div>
         </div>
         <i class="material-icons mobile-icon" id="mobile-icon" onclick="openMobileMenu();">menu</i>
@@ -35,7 +66,7 @@
     <div class="mobile-header" id="mobile-header" state="closed">
         <a href="" class="header-entry" id="mobile-entry-main" state="active">Home</a>
         <a href="#features" class="header-entry" id="mobile-entry-features" state="inactive">Features</a>
-        <a href="#about" class="header-entry" id="mobile-entry-about" state="inactive">About</a>
+        <a href="#about" class="header-entry" id="mobile-entry-about" state="inactive">FAQ</a>
     </div>
 
     <!-- PARA: Main -->
@@ -152,7 +183,7 @@
                 <div class="panel-right-header">Download now for free!</div>
                 <h1 class="panel-right-desc">The tool is free to use and feedback, bug reports and feature requests are very welcome - Have fun!</h1>
                 <div class="panel-right-buttons">
-                    <div class="panel-button-download">
+                    <div class="panel-button-download" id="download-button" onclick="openDownload();">
                         <img src="./res/img/download_windows.svg" alt="">
                         <h1>Download</h1>
                     </div>
@@ -244,6 +275,12 @@
                     </div>
                 </div>
                 <div class="faq-entry">
+                    <h1 class="faq-entry-header">The installer gets blocked by my antivirus?</h1>
+                    <div class="faq-entry-wrap">
+                        <h1 class="faq-entry-desc">The tool was built using ElectronJS and is free of any malware, viruses or other malicious software! You can check out the most recent VirusTotal scan result <a href="https://www.virustotal.com/gui/file/29e66d0c6a92c8be66a1bf25c88d3403e1cb67572437c1822b81e4f300941ab8" target="_blank">here</a>. <b>If Windows warns you, it's because I can't afford a rather expensive code signing certificate to validate the installer - Just click "More info" and "Run anyway" to proceed with the installation.</b></h1>
+                    </div>
+                </div>
+                <div class="faq-entry">
                     <h1 class="faq-entry-header">How can I get rid of the purple screens?</h1>
                     <div class="faq-entry-wrap">
                         <h1 class="faq-entry-desc">There currently is no easy way to get rid of them. Twitch is responsible for the embeded player and the only possibilities are either subscribing to the channel you are watching or watching a streamer that is neither affiliate nor partner.</h1>
@@ -274,9 +311,9 @@
                     </div>
                 </div>
                 <div class="faq-entry">
-                    <h1 class="faq-entry-header">The installer gets blocked by my antivirus?</h1>
+                    <h1 class="faq-entry-header">Can I change the language?</h1>
                     <div class="faq-entry-wrap">
-                        <h1 class="faq-entry-desc">The tool was built using ElectronJS and is free of any malware, viruses or other malicious software! You can check out recent VirusTotal scan results <a href="">here</a>. If Windows warns you, it's because I can't afford a rather expensive code signing certificate to validate the installer.</h1>
+                        <h1 class="faq-entry-desc">Yes, the tool currently comes in English and German, while hopefully being translated in more languages soon. If you would like to help translate the tool in your language, please feel free to <a href="https://twitter.com/smilefxofficial">contact</a> me.</h1>
                     </div>
                 </div>
             </div>
